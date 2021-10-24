@@ -1,0 +1,128 @@
+﻿<div class="card card-custom">
+    <div class="card-header">
+        <h3 class="card-title">
+            Configuring Desired Silo
+        </h3>
+    </div>
+    <!--begin::Form-->
+    <form>
+        <div class="card-body">
+            <div class="form-group mb-8">
+                <div class="alert alert-custom alert-default" role="alert">
+                    <div class="alert-icon"><i class="flaticon-warning text-primary"></i></div>
+                    <div class="alert-text">
+                        Please configure the input of the dataset you want to create
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Number of Entry</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" value="10000" id="example-text-input" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="example-search-input" class="col-2 col-form-label">Average Visits</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" value="1-6" id="example-search-input" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Number of Treatment Followed Up</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" value="2-5" id="example-text-input" />
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">Number</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" value="42" id="example-number-input" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-email-input" class="col-2 col-form-label">Mean EDSS</label>
+                <div class="col-10">
+                    <input class="form-control" type="range" />
+                </div>
+            </div>
+
+
+            <form class="form">
+                <div class="form-group row">
+                    <label class="col-3 col-form-label">T8 Test</label>
+                    <div class="col-3">
+                        <span class="switch">
+                            <label>
+                                <input type="checkbox" checked="checked" name="select" />
+                                <span></span>
+                            </label>
+                        </span>
+                    </div>
+                    <label class="col-3 col-form-label">NHPT Test</label>
+                    <div class="col-3">
+                        <span class="switch switch-icon">
+                            <label>
+                                <input type="checkbox" checked="checked" name="select" />
+                                <span></span>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-3 col-form-label">PASAT Test</label>
+                    <div class="col-3">
+                        <span class="switch">
+                            <label>
+                                <input type="checkbox" name="" />
+                                <span></span>
+                            </label>
+                        </span>
+                    </div>
+                    <label class="col-3 col-form-label">ScoreCerebellar</label>
+                    <div class="col-3">
+                        <span class="switch switch-icon">
+                            <label>
+                                <input type="checkbox" name="" />
+                                <span></span>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-3 col-form-label">MRI</label>
+                    <div class="col-3">
+                        <span class="switch">
+                            <label>
+                                <input type="checkbox" disabled="disabled" />
+                                <span></span>
+                            </label>
+                        </span>
+                    </div>
+                    <label class="col-3 col-form-label">ScorePyramidal</label>
+                    <div class="col-3">
+                        <span class="switch switch-icon">
+                            <label>
+                                <input type="checkbox" disabled="disabled" />
+                                <span></span>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-2">
+                </div>
+                <div class="col-10">
+                    <button type="reset" class="btn btn-success mr-2">Export</button>
+                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

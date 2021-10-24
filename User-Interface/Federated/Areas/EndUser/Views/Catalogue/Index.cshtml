@@ -1,0 +1,939 @@
+﻿@model Federated.Models.Outcomes
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="card card-custom">
+    <div class="card-header">
+        <div class="card-toolbar">
+            <ul class="nav nav-light-danger nav-bold nav-pills">
+
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#kt_tab_pane_5_2">
+                        <span class="nav-icon">
+                            <i class="flaticon2-drop"></i>
+                        </span>
+                        <span class="nav-text">Results</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_5_3">
+                        <span class="nav-icon">
+                            <i class="flaticon2-drop"></i>
+                        </span>
+                        <span class="nav-text">Charts</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="tab-content">
+
+            <div class="tab-pane fade active show" id="kt_tab_pane_5_2" role="tabpanel" aria-labelledby="kt_tab_pane_5_2">
+
+                <!--begin::SEX-->
+                <div class="row">
+                    <div class="col-xl-4">
+                        <!--begin::Stats Widget 4-->
+                        <div class="card card-custom card-stretch gutter-b">
+                            <!--begin::Body-->
+                            <div class="card-body d-flex align-items-center py-0 mt-8">
+                                <div class="d-flex flex-column flex-grow-1 py-2 py-lg-5">
+                                    <a href="#" class="card-title font-weight-bolder text-dark-75 font-size-h5 mb-2 text-hover-primary">@Model.clinicians_Sex_Binaries.FirstOrDefault().male</a>
+                                    <span class="font-weight-bold text-muted font-size-lg">Male</span>
+                                </div>
+                                <img src="/assets/media/svg/avatars/029-boy-11.svg" alt="" class="align-self-end h-100px">
+                            </div>
+                            <!--end::Body-->
+                        </div>
+                        <!--end::Stats Widget 4-->
+                    </div>
+                    <div class="col-xl-4">
+                        <!--begin::Stats Widget 5-->
+                        <div class="card card-custom card-stretch gutter-b">
+                            <!--begin::Body-->
+                            <div class="card-body d-flex align-items-center py-0 mt-8">
+                                <div class="d-flex flex-column flex-grow-1 py-2 py-lg-5">
+                                    <a href="#" class="card-title font-weight-bolder text-dark-75 font-size-h5 mb-2 text-hover-primary">@Model.clinicians_Sex_Binaries.FirstOrDefault().female</a>
+                                    <span class="font-weight-bold text-muted font-size-lg">Female</span>
+                                </div>
+                                <img src="/assets/media/svg/avatars/014-girl-7.svg" alt="" class="align-self-end h-100px">
+                            </div>
+                            <!--end::Body-->
+                        </div>
+                        <!--end::Stats Widget 5-->
+                    </div>
+                    <div class="col-xl-4">
+                        <!--begin::Stats Widget 6-->
+                        <div class="card card-custom card-stretch gutter-b">
+                            <!--begin::Body-->
+                            <div class="card-body d-flex align-items-center py-0 mt-8">
+                                <div class="d-flex flex-column flex-grow-1 py-2 py-lg-5">
+                                    <a href="#" class="card-title font-weight-bolder text-dark-75 font-size-h5 mb-2 text-hover-primary">@Model.clinicians_Sex_Binaries.FirstOrDefault().missing</a>
+                                    <span class="font-weight-bold text-muted font-size-lg">Missing</span>
+                                </div>
+                                <img src="/assets/media/svg/illustrations/copy.svg" alt="" class="align-self-end h-100px">
+                            </div>
+                            <!--end::Body-->
+                        </div>
+                        <!--end::Stats Widget 6-->
+                    </div>
+                </div>
+
+                <!--Begin:: Stats TYPE-MS-->
+                <div class="row">
+
+                    <div class="col-sm-3 mb-5" style="height: 177px;">
+                        <!--begin::Iconbox-->
+                        <div class="card card-custom wave wave-animate-slow wave-primary mb-8 mb-lg-0">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center p-5">
+                                    <div class="mr-6">
+                                        <span class="svg-icon svg-icon-primary svg-icon-4x">
+                                            <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-09-15-014444/theme/html/demo10/dist/../src/media/svg/icons/Media/Equalizer.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <rect x="0" y="0" width="24" height="24" />
+                                                    <rect fill="#000000" opacity="0.3" x="13" y="4" width="3" height="16" rx="1.5" />
+                                                    <rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5" />
+                                                    <rect fill="#000000" x="18" y="11" width="3" height="9" rx="1.5" />
+                                                    <rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5" />
+                                                </g>
+                                            </svg><!--end::Svg Icon-->
+                                        </span>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark text-hover-primary font-weight-bold font-size-h5 mb-3">Progressive MS<br /> (SPMS + PPMS)</a>
+                                        <a href="#" class="text-dark text-hover-primary font-size-sm  mb-3 ">Type of MS</a>
+                                        <div class="text-dark-75 font-size-h3 font-weight-bold"> @Model.clinicians_Ms_Type2s.FirstOrDefault().progressive_MS</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Iconbox-->
+                    </div>
+
+
+                    <div class="col-sm-3 mb-5">
+                        <!--begin::Iconbox-->
+                        <div class="card card-custom wave wave-animate wave-danger mb-8 mb-lg-0">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center p-5">
+                                    <div class="mr-6">
+                                        <span class="svg-icon svg-icon-danger svg-icon-4x">
+                                            <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-09-15-014444/theme/html/demo10/dist/../src/media/svg/icons/Media/Repeat.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <rect x="0" y="0" width="24" height="24" />
+                                                    <path d="M12,8 L8,8 C5.790861,8 4,9.790861 4,12 L4,13 C4,14.6568542 5.34314575,16 7,16 L7,18 C4.23857625,18 2,15.7614237 2,13 L2,12 C2,8.6862915 4.6862915,6 8,6 L12,6 L12,4.72799742 C12,4.62015048 12.0348702,4.51519416 12.0994077,4.42878885 C12.264656,4.2075478 12.5779675,4.16215674 12.7992086,4.32740507 L15.656242,6.46136716 C15.6951359,6.49041758 15.7295917,6.52497737 15.7585249,6.56395854 C15.9231063,6.78569617 15.876772,7.09886961 15.6550344,7.263451 L12.798001,9.3840407 C12.7118152,9.44801079 12.607332,9.48254921 12.5,9.48254921 C12.2238576,9.48254921 12,9.25869158 12,8.98254921 L12,8 Z" fill="#000000" />
+                                                    <path d="M12.0583175,16 L16,16 C18.209139,16 20,14.209139 20,12 L20,11 C20,9.34314575 18.6568542,8 17,8 L17,6 C19.7614237,6 22,8.23857625 22,11 L22,12 C22,15.3137085 19.3137085,18 16,18 L12.0583175,18 L12.0583175,18.9825492 C12.0583175,19.2586916 11.8344599,19.4825492 11.5583175,19.4825492 C11.4509855,19.4825492 11.3465023,19.4480108 11.2603165,19.3840407 L8.40328311,17.263451 C8.18154548,17.0988696 8.13521119,16.7856962 8.29979258,16.5639585 C8.32872576,16.5249774 8.36318164,16.4904176 8.40207551,16.4613672 L11.2591089,14.3274051 C11.48035,14.1621567 11.7936615,14.2075478 11.9589099,14.4287888 C12.0234473,14.5151942 12.0583175,14.6201505 12.0583175,14.7279974 L12.0583175,16 Z" fill="#000000" opacity="0.3" />
+                                                </g>
+                                            </svg><!--end::Svg Icon-->
+                                        </span>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark text-hover-primary font-weight-bold font-size-h5 mb-3">RRMS<br /> <br /> </a>
+                                        <a href="#" class="text-dark text-hover-primary font-size-sm  mb-3 ">Type of MS</a>
+                                        <div class="text-dark-75 font-size-h3 font-weight-bold">@Model.clinicians_Ms_Type2s.FirstOrDefault().relapsing_remitting</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Iconbox-->
+                    </div>
+
+                    <div class="col-sm-3 mb-5">
+                        <!--begin::Iconbox-->
+                        <div class="card card-custom wave wave-animate wave-warning mb-8 mb-lg-0">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center p-5">
+                                    <div class="mr-6">
+                                        <span class="svg-icon svg-icon-danger svg-icon-4x">
+                                            <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-09-15-014444/theme/html/demo10/dist/../src/media/svg/icons/General/Expand-arrows.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24" />
+                                                    <path d="M10.5857864,12 L5.46446609,6.87867966 C5.0739418,6.48815536 5.0739418,5.85499039 5.46446609,5.46446609 C5.85499039,5.0739418 6.48815536,5.0739418 6.87867966,5.46446609 L12,10.5857864 L18.1923882,4.39339828 C18.5829124,4.00287399 19.2160774,4.00287399 19.6066017,4.39339828 C19.997126,4.78392257 19.997126,5.41708755 19.6066017,5.80761184 L13.4142136,12 L19.6066017,18.1923882 C19.997126,18.5829124 19.997126,19.2160774 19.6066017,19.6066017 C19.2160774,19.997126 18.5829124,19.997126 18.1923882,19.6066017 L12,13.4142136 L6.87867966,18.5355339 C6.48815536,18.9260582 5.85499039,18.9260582 5.46446609,18.5355339 C5.0739418,18.1450096 5.0739418,17.5118446 5.46446609,17.1213203 L10.5857864,12 Z" fill="#000000" opacity="0.3" transform="translate(12.535534, 12.000000) rotate(-360.000000) translate(-12.535534, -12.000000) " />
+                                                    <path d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z" fill="#000000" fill-rule="nonzero" />
+                                                </g>
+                                            </svg><!--end::Svg Icon-->
+                                        </span>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark text-hover-primary font-weight-bold font-size-h5 mb-3">Other<br /> <br /> </a>
+                                        <a href="#" class="text-dark text-hover-primary font-size-sm  mb-3 ">Type of MS</a>
+                                        <div class="text-dark-75 font-size-h3 font-weight-bold">@Model.clinicians_Ms_Type2s.FirstOrDefault().other</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Iconbox-->
+                    </div>
+
+                    <div class="col-sm-3">
+                        <!--begin::Iconbox-->
+                        <div class="card card-custom wave wave-animate-fast wave-success">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center p-5">
+                                    <div class="mr-6">
+                                        <span class="svg-icon svg-icon-success svg-icon-4x">
+                                            <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-09-15-014444/theme/html/demo10/dist/../src/media/svg/icons/Code/Warning-1-circle.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <rect x="0" y="0" width="24" height="24" />
+                                                    <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10" />
+                                                    <rect fill="#000000" x="11" y="7" width="2" height="8" rx="1" />
+                                                    <rect fill="#000000" x="11" y="16" width="2" height="2" rx="1" />
+                                                </g>
+                                            </svg><!--end::Svg Icon-->
+                                        </span>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark text-hover-primary font-weight-bold font-size-h5 mb-3">Missing <br /> <br /> </a>
+                                        <a href="#" class="text-dark text-hover-primary font-size-sm  mb-3 ">Type of MS</a>
+                                        <div class="text-dark-75 font-size-h3 font-weight-bold">@Model.clinicians_Ms_Type2s.FirstOrDefault().missing</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Iconbox-->
+                    </div>
+
+                </div>
+                <!--End:: Stats TYPE-MS-->
+                <!--begin:: Stats EDSS,AGE-->
+                <div class="row">
+                    <div class="col-md-3">
+
+                        <div class="card card-custom bgi-no-repeat gutter-b card-stretch" style=" background-color: #663259; background-position: calc(100% + 0.5rem) 100%; background-size: 175% auto; background-image: url(/assets/media/svg/patterns/taieri.svg)">
+                            <!--begin::Body-->
+                            <div class="card-body">
+                                <span class="svg-icon svg-icon-white svg-icon-3x">
+                                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-09-15-014444/theme/html/demo10/dist/../src/media/svg/icons/Communication/Dial-numbers.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24" />
+                                            <rect fill="#000000" opacity="0.3" x="4" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="4" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="4" y="16" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="16" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="16" width="4" height="4" rx="2" />
+                                        </g>
+                                    </svg><!--end::Svg Icon-->
+                                </span>
+                                <span class=" align-center font-weight-bolder text-white font-size-h2 mb-0 mt-6 text-hover-primary d-block">EDSS</span>
+                            </div>
+                            <!--end::Body-->
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card card-custom bg-warning gutter-b">
+                            <!--begin::Body-->
+                            <div class="card-body">
+                                <span class="svg-icon svg-icon-white svg-icon-2x">
+                                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-09-15-014444/theme/html/demo10/dist/../src/media/svg/icons/Communication/Dial-numbers.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24" />
+                                            <rect fill="#000000" opacity="0.3" x="4" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="4" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="4" y="16" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="16" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="16" width="4" height="4" rx="2" />
+                                        </g>
+                                    </svg><!--end::Svg Icon-->
+                                </span>
+
+                                <span class="card-title font-weight-bolder text-white font-size-h2 mb-0 mt-6 text-hover-primary d-block">@Model.clinicians_Edss_In_Cat2s.FirstOrDefault().zero</span>
+                                <span class="font-weight-bold text-white font-size-sm">0<= EDSS <=6</span>
+                                <span class="font-weight-bold text-white font-size-sm"></span>
+                            </div>
+                            <!--end::Body-->
+                        </div>
+                        <div class="card card-custom gutter-b" style="background-color: #4AB58E;">
+                            <!--begin::Body-->
+                            <div class="card-body">
+                                <span class="svg-icon svg-icon-white svg-icon-2x">
+                                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-09-15-014444/theme/html/demo10/dist/../src/media/svg/icons/Communication/Dial-numbers.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24" />
+                                            <rect fill="#000000" opacity="0.3" x="4" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="4" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="4" y="16" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="16" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="16" width="4" height="4" rx="2" />
+                                        </g>
+                                    </svg><!--end::Svg Icon-->
+                                </span>
+
+                                <span class="card-title font-weight-bolder text-white font-size-h2 mb-0 mt-6 text-hover-primary d-block">@Model.clinicians_Edss_In_Cat2s.FirstOrDefault().one</span>
+                                <span class="font-weight-bold text-white font-size-sm">6< EDSS</span>
+                                <span class="font-weight-bold text-white font-size-sm"></span>
+                            </div>
+                            <!--end::Body-->
+                        </div>
+
+
+
+
+                        <div class="card card-custom gutter-b" style="background-color: #4AB58E;">
+                            <!--begin::Body-->
+                            <div class="card-body">
+                                <span class="svg-icon svg-icon-white svg-icon-2x">
+                                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-09-15-014444/theme/html/demo10/dist/../src/media/svg/icons/Communication/Dial-numbers.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24" />
+                                            <rect fill="#000000" opacity="0.3" x="4" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="4" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="4" y="16" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="16" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="16" width="4" height="4" rx="2" />
+                                        </g>
+                                    </svg><!--end::Svg Icon-->
+                                </span>
+
+                                <span class="card-title font-weight-bolder text-white font-size-h2 mb-0 mt-6 text-hover-primary d-block">@Model.clinicians_Edss_In_Cat2s.FirstOrDefault().missing</span>
+                                <span class="font-weight-bold text-white font-size-sm">Missing</span>
+                                <span class="font-weight-bold text-white font-size-sm"></span>
+                            </div>
+                            <!--end::Body-->
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-3">
+                        <div class="card card-custom bg-danger  gutter-b">
+                            <!--begin::Body-->
+                            <div class="card-body">
+                                <span class="svg-icon svg-icon-white svg-icon-2x">
+                                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-05-06-223557/theme/html/demo1/dist/../src/media/svg/icons/Communication/Group.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <polygon points="0 0 24 0 24 24 0 24" />
+                                            <path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                            <path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+                                        </g>
+                                    </svg><!--end::Svg Icon-->
+                                </span>
+                                <span class="card-title font-weight-bolder text-white font-size-h2 mb-0 mt-6 text-hover-primary d-block">@Model.clinicians_Age_in_Cats.FirstOrDefault().one</span>
+                                <span class="font-weight-bold text-white font-size-sm">18<= Age <=50</span>
+                            </div>
+                            <!--end::Body-->
+                        </div>
+                        <div class="card card-custom bg-danger  gutter-b">
+                            <!--begin::Body-->
+                            <div class="card-body">
+                                <span class="svg-icon svg-icon-white svg-icon-2x">
+                                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-05-06-223557/theme/html/demo1/dist/../src/media/svg/icons/Communication/Group.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <polygon points="0 0 24 0 24 24 0 24" />
+                                            <path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                            <path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+                                        </g>
+                                    </svg><!--end::Svg Icon-->
+                                </span>
+                                <span class="card-title font-weight-bolder text-white font-size-h2 mb-0 mt-6 text-hover-primary d-block">@Model.clinicians_Age_in_Cats.FirstOrDefault().two</span>
+                                <span class="font-weight-bold text-white font-size-sm">50< Age<=70</span>
+                            </div>
+                            <!--end::Body-->
+                        </div>
+                        <div class="card card-custom bg-warning  gutter-b">
+                            <!--begin::Body-->
+                            <div class="card-body">
+                                <span class="svg-icon svg-icon-white svg-icon-2x">
+                                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-05-06-223557/theme/html/demo1/dist/../src/media/svg/icons/Communication/Group.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <polygon points="0 0 24 0 24 24 0 24" />
+                                            <path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                            <path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+                                        </g>
+                                    </svg><!--end::Svg Icon-->
+                                </span>
+                                <span class="card-title font-weight-bolder text-white font-size-h2 mb-0 mt-6 text-hover-primary d-block">@Model.clinicians_Age_in_Cats.FirstOrDefault().three</span>
+                                <span class="font-weight-bold text-white font-size-sm">70< Age</span>
+                            </div>
+                            <!--end::Body-->
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card card-custom bgi-no-repeat gutter-b card-stretch" style="        background-color: #663259;
+        background-position: calc(68% + 5.5rem) 0%;
+        background-size: 125% auto;
+        background-image: url(/assets/media/svg/humans/custom-9.svg)">
+                            <!--begin::Body-->
+                            <div class="card-body">
+                                <span class="svg-icon svg-icon-white svg-icon-3x">
+                                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-09-15-014444/theme/html/demo10/dist/../src/media/svg/icons/Communication/Dial-numbers.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24" />
+                                            <rect fill="#000000" opacity="0.3" x="4" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="4" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="4" y="16" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="10" y="16" width="4" height="4" rx="2" />
+                                            <rect fill="#000000" x="16" y="16" width="4" height="4" rx="2" />
+                                        </g>
+                                    </svg><!--end::Svg Icon-->
+                                </span>
+                                <span class=" align-center font-weight-bolder text-white font-size-h2 mb-0 mt-6 text-hover-primary d-block">Age</span>
+                            </div>
+                            <!--end::Body-->
+                        </div>
+                    </div>
+                </div>
+                <!--End::End EDSS.AGE-->
+               
+            
+                <!--Tab3 Begin Charts-->
+                <!--Tab3 End Charts-->
+            </div>
+
+            <!--Tab3 Begin Charts-->
+            <div class="tab-pane fade" id="kt_tab_pane_5_3" role="tabpanel" aria-labelledby="kt_tab_pane_5_3">
+
+                <div class="row">
+
+                    <div class="col-xl-6">
+                        <div class="card card-custom gutter-b">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <h3 class="card-label">Sex Binary</h3>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="Sexbinary" style="height: 500px; overflow: visible; text-align: left;">
+                                    <div class="amcharts-main-div" style="position: relative;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-xl-6">
+                        <div class="card card-custom gutter-b">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <h3 class="card-label">EDSS</h3>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="Edss" style="height: 500px; overflow: visible; text-align: left;">
+                                    <div class="amcharts-main-div" style="position: relative;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card card-custom gutter-b">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <h3 class="card-label">MS Type</h3>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="Mstype" style="height: 500px; overflow: visible; text-align: left;">
+                                    <div class="amcharts-main-div" style="position: relative;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card card-custom gutter-b">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <h3 class="card-label">Overall Missing in Variables</h3>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="Missing" style="height: 500px; overflow: visible; text-align: left;">
+                                    <div class="amcharts-main-div" style="position: relative;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+
+
+                <div class="card card-custom gutter-b">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3 class="card-label">DMT Type Overall</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="fishbone" style="height: 500px; overflow: visible; text-align: left;">
+                            <div class="amcharts-main-div" style="position: relative;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+               
+                </div>
+            </div>
+            <!--Tab3 End Charts-->
+        </div>
+    </div>
+
+<!--begin::Page Vendors(used by this page)-->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/kelly.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/plugins/timeline.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+
+
+
+<!--end::Page Vendors-->
+<!--Start:-Sex Binary Chart-->
+<script>
+            am4core.ready(function () {
+
+                // Themes begin
+                am4core.useTheme(am4themes_animated);
+                // Themes end
+
+                // Create chart instance
+                var chart = am4core.create("Sexbinary", am4charts.PieChart);
+
+                // Let's cut a hole in our Pie chart the size of 40% the radius
+                chart.innerRadius = am4core.percent(40);
+
+
+
+                // Add and configure Series
+                var pieSeries = chart.series.push(new am4charts.PieSeries());
+                pieSeries.dataFields.value = "value";
+                pieSeries.dataFields.category = "category";
+                pieSeries.slices.template.stroke = am4core.color("#fff");
+                pieSeries.innerRadius = 10;
+                pieSeries.slices.template.fillOpacity = 0.5;
+
+                pieSeries.slices.template.propertyFields.disabled = "labelDisabled";
+                pieSeries.labels.template.propertyFields.disabled = "labelDisabled";
+                pieSeries.ticks.template.propertyFields.disabled = "labelDisabled";
+                var plus = @Model.clinicians_Sex_Binaries.FirstOrDefault().male +  @Model.clinicians_Sex_Binaries.FirstOrDefault().female;
+
+                // Add data
+                pieSeries.data = [{
+                    "category": "Male + Female",
+                    "value": plus
+                }, {
+                    "category": "Missing",
+                    "value":  @Model.clinicians_Sex_Binaries.FirstOrDefault().missing,
+                    "labelDisabled": true
+                }];
+
+                // Disable sliding out of slices
+                pieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0;
+                pieSeries.slices.template.states.getKey("hover").properties.scale = 1;
+
+                // Add second series
+                var pieSeries2 = chart.series.push(new am4charts.PieSeries());
+                pieSeries2.dataFields.value = "value";
+                pieSeries2.dataFields.category = "category";
+                pieSeries2.slices.template.states.getKey("hover").properties.shiftRadius = 0;
+                pieSeries2.slices.template.states.getKey("hover").properties.scale = 1;
+                pieSeries2.slices.template.propertyFields.fill = "fill";
+
+                // Add data
+                pieSeries2.data = [{
+                    "category": "Male",
+                    "value": @Model.clinicians_Sex_Binaries.FirstOrDefault().male
+                }, {
+                    "category": "Female",
+                    "value": @Model.clinicians_Sex_Binaries.FirstOrDefault().female
+                }, {
+                    "category": "Missing",
+                    "value": @Model.clinicians_Sex_Binaries.FirstOrDefault().missing,
+                    "fill": "#dedede"
+                }];
+
+
+                pieSeries.adapter.add("innerRadius", function (innerRadius, target) {
+                    return am4core.percent(40);
+                })
+
+                pieSeries2.adapter.add("innerRadius", function (innerRadius, target) {
+                    return am4core.percent(60);
+                })
+
+                pieSeries.adapter.add("radius", function (innerRadius, target) {
+                    return am4core.percent(100);
+                })
+
+                pieSeries2.adapter.add("radius", function (innerRadius, target) {
+                    return am4core.percent(80);
+                })
+
+            }); // end am4core.ready()
+</script>
+<!--End:-Sex Binary Chart-->
+<!--Start:-Ms Type Chart-->
+<script>
+            am4core.ready(function () {
+
+                // Themes begin
+                am4core.useTheme(am4themes_animated);
+                // Themes end
+
+                // Create chart
+                var chart = am4core.create("Mstype", am4charts.PieChart);
+                chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+                chart.data = [
+                    {
+                        country: "PPMS",
+                        value: @Model.clinicians_Ms_Type2s.FirstOrDefault().progressive_MS
+                    },
+                    {
+                        country: "RRMS",
+                        value: @Model.clinicians_Ms_Type2s.FirstOrDefault().relapsing_remitting
+                    },
+                    {
+                        country: "Other",
+                        value: @Model.clinicians_Ms_Type2s.FirstOrDefault().other
+                    },
+                    {
+                        country: "Missing",
+                        value: @Model.clinicians_Ms_Type2s.FirstOrDefault().missing
+                    }
+                ];
+
+                var series = chart.series.push(new am4charts.PieSeries());
+                series.dataFields.value = "value";
+                series.dataFields.radiusValue = "value";
+                series.dataFields.category = "country";
+                series.slices.template.cornerRadius = 6;
+                series.colors.step = 3;
+
+                series.hiddenState.properties.endAngle = -90;
+
+                chart.legend = new am4charts.Legend();
+
+            }); // end am4core.ready()
+</script>
+<!--End:-Ms Type Chart-->
+<!--Star:- EDSS-->
+<script>
+            am4core.ready(function () {
+
+                // Themes begin
+                am4core.useTheme(am4themes_animated);
+                // Themes end
+
+                // Create chart instance
+                var chart = am4core.create("Edss", am4charts.PieChart);
+                chart.startAngle = 160;
+                chart.endAngle = 380;
+
+                // Let's cut a hole in our Pie chart the size of 40% the radius
+                chart.innerRadius = am4core.percent(40);
+
+                // Add data
+                chart.data = [{
+                    "country": "0<= EDSS <=6",
+                    "litres": @Model.clinicians_Edss_In_Cat2s.FirstOrDefault().zero
+                }, {
+                    "country": "6< EDSS ",
+                    "litres":  @Model.clinicians_Edss_In_Cat2s.FirstOrDefault().one
+
+                }, {
+                    "country": "Missing",
+                    "litres":  @Model.clinicians_Edss_In_Cat2s.FirstOrDefault().missing
+
+                }];
+
+                // Add and configure Series
+                var pieSeries = chart.series.push(new am4charts.PieSeries());
+                pieSeries.dataFields.value = "litres";
+                pieSeries.dataFields.category = "country";
+                pieSeries.slices.template.stroke = new am4core.InterfaceColorSet().getFor("background");
+                pieSeries.slices.template.strokeWidth = 1;
+                pieSeries.slices.template.strokeOpacity = 1;
+
+                // Disabling labels and ticks on inner circle
+                pieSeries.labels.template.disabled = true;
+                pieSeries.ticks.template.disabled = true;
+
+                // Disable sliding out of slices
+                pieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0;
+                pieSeries.slices.template.states.getKey("hover").properties.scale = 1;
+                pieSeries.radius = am4core.percent(40);
+                pieSeries.innerRadius = am4core.percent(30);
+
+                var cs = pieSeries.colors;
+                cs.list = [am4core.color(new am4core.ColorSet().getIndex(0))];
+
+                cs.stepOptions = {
+                    lightness: -0.05,
+                    hue: 0
+                };
+                cs.wrap = false;
+
+
+                // Add second series
+                var pieSeries2 = chart.series.push(new am4charts.PieSeries());
+                pieSeries2.dataFields.value = "litres";
+                pieSeries2.dataFields.category = "country";
+                pieSeries2.slices.template.stroke = new am4core.InterfaceColorSet().getFor("background");
+                pieSeries2.slices.template.strokeWidth = 1;
+                pieSeries2.slices.template.strokeOpacity = 1;
+                pieSeries2.slices.template.states.getKey("hover").properties.shiftRadius = 0.05;
+                pieSeries2.slices.template.states.getKey("hover").properties.scale = 1;
+
+                pieSeries2.labels.template.disabled = true;
+                pieSeries2.ticks.template.disabled = true;
+
+
+                var label = chart.seriesContainer.createChild(am4core.Label);
+                label.textAlign = "middle";
+                label.horizontalCenter = "middle";
+                label.verticalCenter = "middle";
+                label.adapter.add("text", function (text, target) {
+                    return "[font-size:18px]total[/]:\n[bold font-size:30px]" + pieSeries.dataItem.values.value.sum + "[/]";
+                })
+
+            }); // end am4core.ready()
+</script>
+<!--End: --EDSS-->
+<!--Start:--Missing-->
+<script>
+            am4core.ready(function () {
+
+                // Themes begin
+                am4core.useTheme(am4themes_animated);
+                // Themes end
+
+
+
+                // Create chart instance
+                var chart = am4core.create("Missing", am4charts.RadarChart);
+
+
+                var jamesex =@Model.clinicians_Sex_Binaries.FirstOrDefault().missing / (  @Model.clinicians_Sex_Binaries.FirstOrDefault().male +  @Model.clinicians_Sex_Binaries.FirstOrDefault().female +  @Model.clinicians_Sex_Binaries.FirstOrDefault().missing);
+
+                var jameAge = @Model.clinicians_Age_in_Cats.FirstOrDefault().missing / (@Model.clinicians_Age_in_Cats.FirstOrDefault().zero + @Model.clinicians_Age_in_Cats.FirstOrDefault().one + @Model.clinicians_Age_in_Cats.FirstOrDefault().two + @Model.clinicians_Age_in_Cats.FirstOrDefault().three);
+                var jamems =@Model.clinicians_Ms_Type2s.FirstOrDefault().missing / ( @Model.clinicians_Ms_Type2s.FirstOrDefault().relapsing_remitting +  @Model.clinicians_Ms_Type2s.FirstOrDefault().progressive_MS +  @Model.clinicians_Ms_Type2s.FirstOrDefault().missing + @Model.clinicians_Ms_Type2s.FirstOrDefault().other);
+                var jameEDSS =  @Model.clinicians_Edss_In_Cat2s.FirstOrDefault().missing / (@Model.clinicians_Edss_In_Cat2s.FirstOrDefault().zero +  @Model.clinicians_Edss_In_Cat2s.FirstOrDefault().one +  @Model.clinicians_Edss_In_Cat2s.FirstOrDefault().missing);
+
+                var jameDMT = @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().missing / (@Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_not_using_DMT + @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_no_information_DMT_use + @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_alemtuzumab + @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_another_drug_not_listed + @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_cladribine + @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_fingolimod + @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_fumarate + @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_cladribine + @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_siponimod + @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_rituximab + @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_teriflunomide );
+                // Add data
+                chart.data = [{
+                    "category": "Sex Binaries",
+                    "value": jamesex * 100 ,
+                    "full": 100
+                }, {
+                    "category": "MS Type",
+                    "value": jamems * 100,
+                        "full": 100
+                },{
+                    "category": "EDSS",
+                        "value": jameEDSS * 100,
+                        "full": 100
+                    },
+                    {
+                        "category": "Overall DMT",
+                        "value": jameDMT * 100,
+                        "full": 100
+                    },
+                    {
+                        "category": "Age in Category",
+                        "value": jameAge * 100,
+                        "full": 100
+                    }
+                ];
+
+                // Make chart not full circle
+                chart.startAngle = -90;
+                chart.endAngle = 180;
+                chart.innerRadius = am4core.percent(20);
+
+                // Set number format
+                chart.numberFormatter.numberFormat = "#.#'%'";
+
+                // Create axes
+                var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+                categoryAxis.dataFields.category = "category";
+                categoryAxis.renderer.grid.template.location = 0;
+                categoryAxis.renderer.grid.template.strokeOpacity = 0;
+                categoryAxis.renderer.labels.template.horizontalCenter = "right";
+                categoryAxis.renderer.labels.template.fontWeight = 500;
+                categoryAxis.renderer.labels.template.adapter.add("fill", function (fill, target) {
+                    return (target.dataItem.index >= 0) ? chart.colors.getIndex(target.dataItem.index) : fill;
+                });
+                categoryAxis.renderer.minGridDistance = 10;
+
+                var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+                valueAxis.renderer.grid.template.strokeOpacity = 0;
+                valueAxis.min = 0;
+                valueAxis.max = 100;
+                valueAxis.strictMinMax = true;
+
+                // Create series
+                var series1 = chart.series.push(new am4charts.RadarColumnSeries());
+                series1.dataFields.valueX = "full";
+                series1.dataFields.categoryY = "category";
+                series1.clustered = false;
+                series1.columns.template.fill = new am4core.InterfaceColorSet().getFor("alternativeBackground");
+                series1.columns.template.fillOpacity = 0.08;
+                series1.columns.template.cornerRadiusTopLeft = 20;
+                series1.columns.template.strokeWidth = 0;
+                series1.columns.template.radarColumn.cornerRadius = 20;
+
+                var series2 = chart.series.push(new am4charts.RadarColumnSeries());
+                series2.dataFields.valueX = "value";
+                series2.dataFields.categoryY = "category";
+                series2.clustered = false;
+                series2.columns.template.strokeWidth = 0;
+                series2.columns.template.tooltipText = "{category}: [bold]{value}[/]";
+                series2.columns.template.radarColumn.cornerRadius = 20;
+
+                series2.columns.template.adapter.add("fill", function (fill, target) {
+                    return chart.colors.getIndex(target.dataItem.index);
+                });
+
+                // Add cursor
+                chart.cursor = new am4charts.RadarCursor();
+
+            }); // end am4core.ready()
+</script>
+<!--End:--Missing-->
+
+
+<!--Start ---fishbone----->
+<script>
+    am4core.ready(function () {
+
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+        var chart = am4core.create("fishbone", am4charts.PieChart);
+        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+        chart.data = [{
+
+            "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_not_using_DMT,
+            "country": "Currently_not_using_DMT"
+        }, {
+
+            "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_no_information_DMT_use,
+                "country": "currently_no_information_DMT_use"
+        }, {
+            "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_alemtuzumab,
+                "country": "currently_on_alemtuzumab"
+        }, {
+
+            "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_another_drug_not_listed,
+                "country": "currently_on_another_drug_not_listed"
+        }, {
+            "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_fingolimod,
+                "country": "currently_on_fingolimod"
+        }, {
+
+            "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_cladribine,
+                "country": "currently_on_cladribine"
+        }, {
+
+            "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_fingolimod,
+                "country": "currently_on_fingolimod"
+        }, {
+
+                "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_fumarate,
+                "country": "currently_on_fumarate"
+        }, {
+
+            "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_glatiramer,
+                "country": "currently_on_glatiramer"
+        }, {
+
+                "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_interferon,
+                "country": "currently_on_interferon"
+        }, {
+
+                "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_natalizumab,
+                "country": "currently_on_natalizumab"
+        }, {
+
+                "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_ocrelizumab,
+                "country": "currently_on_ocrelizumab"
+        }, {
+
+                "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_rituximab,
+                "country": "currently_on_rituximab"
+        }, {
+
+                "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_siponimod,
+                "country": "currently_on_siponimod"
+        }, {
+
+                "value": @Model.clinicians_Dmt_Type_Overalls.FirstOrDefault().currently_on_teriflunomide,
+                "country": "currently_on_teriflunomide"
+        }
+        ];
+        chart.radius = am4core.percent(70);
+        chart.innerRadius = am4core.percent(40);
+        chart.startAngle = 180;
+        chart.endAngle = 360;
+
+        var series = chart.series.push(new am4charts.PieSeries());
+        series.dataFields.value = "value";
+        series.dataFields.category = "country";
+
+        series.slices.template.cornerRadius = 10;
+        series.slices.template.innerCornerRadius = 7;
+        series.slices.template.draggable = true;
+        series.slices.template.inert = true;
+        series.alignLabels = true;
+
+        series.labels.template.disabled = true;
+        series.hiddenState.properties.startAngle = 90;
+        series.hiddenState.properties.endAngle = 90;
+
+        chart.legend = new am4charts.Legend();
+
+    }); // end am4core.ready()
+</script>
+<!--End ---fishbone------->
+

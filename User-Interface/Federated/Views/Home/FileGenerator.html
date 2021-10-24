@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Slider - Default functionality</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script>
+  $( function() {
+	$( "#dec_slider" ).slider({
+      slide: function(event, ui) {
+				var pos = ui.value;
+				document.getElementById("right_val").textContent = "alive " + pos + "%";
+				document.getElementById("left_val").textContent = (100 - pos) + "% deceased";
+			},
+			  value: 50
+    });
+    $( "#config_settings" ).accordion();
+	//$( "input" ).checkboxradio();
+    $( ".widget input[type=submit], .widget a, .widget button" ).button();
+    $( "button, input, a" ).click( function( event ) {
+      event.preventDefault();
+    } );
+    $( "#file_table" ).hide();
+    $( "#generate_file" ).click( function( event ) {
+      $( "#file_table" ).show();
+    } );
+  } );
+  </script>
+</head>
+<div id="config_settings">
+	<h3>Gender</h3>
+	<div>
+		<fieldset>
+			<legend>Genders and associated weights</legend>
+			<label for="checkbox-1">male</label>
+			<input type="checkbox" name="checkbox-1" id="checkbox-1" checked>
+			<input type="field" name="field-1" id="field-1" value="12">
+			<br>
+			<label for="checkbox-2">female</label>
+			<input type="checkbox" name="checkbox-2" id="checkbox-2" checked>
+			<input type="field" name="field-2" id="field-2" value="24">
+			<br>
+			<label for="checkbox-3">non-binary</label>
+			<input type="checkbox" name="checkbox-3" id="checkbox-3" checked>
+			<input type="field" name="field-3" id="field-3" value="6">
+			<br>
+			<label for="checkbox-4">diverse</label>
+			<input type="checkbox" name="checkbox-4" id="checkbox-4" checked>
+			<input type="field" name="field-4" id="field-4" value="4">
+	  </fieldset>
+	  Add a field: <input type="field" id="gender_add" value="Field Name"> <button class="ui-button ui-widget ui-corner-all addfieldbutton" id="gender">Add a field</button>
+	</div>
+	<h3>Maritial Status</h3>
+	<div>
+		<fieldset>
+			<legend>Marital Status and associated distribution</legend>
+			<label for="checkbox-1">Single</label>
+			<input type="checkbox" name="checkbox-1" id="checkbox-1">
+			<input type="field" name="field-1" id="field-1" value="54">
+			<br>
+			<label for="checkbox-2">Married</label>
+			<input type="checkbox" name="checkbox-2" id="checkbox-2">
+			<input type="field" name="field-2" id="field-2" value="12">
+			<br>
+	  </fieldset>
+	  Add a field: <input type="field" id="maritalstat_add" value="Field Name"> <button class="ui-button ui-widget ui-corner-all addfieldbutton" id="maritalstat">Add a field</button>
+	</div>
+	<h3>Deceased Status</h3>
+	<div>
+		<fieldset>
+			<legend>Deceased Status and associated weights</legend>
+			<span id="right_val">alive 50%</span><div id="dec_slider" style="width: 250px; display: inline-block; margin-left: 10px; margin-right: 10px;"></div><span id="left_val">50% deceased</span>
+	  </fieldset>
+	</div>
+	<h3>MS Phenotype</h3>
+	<div>
+	</div>
+	<h3>DMT</h3>
+	<div>
+	</div>
+	<h3>DMT Interval</h3>
+	<div>
+	</div>
+	<h3>DMT Route</h3>
+	<div>
+	</div>
+	<h3>DMT Stop</h3>
+	<div>
+	</div>
+	<h3>DMT Unit</h3>
+	<div>
+	</div>
+	<h3>DMT Dosage</h3>
+	<div>
+	</div>
+</div>
+<button class="ui-button ui-widget ui-corner-all" id="generate_file">Generate file</button>
+
+<div id="file_table">table</div>
+ 
+</body>
+</html>

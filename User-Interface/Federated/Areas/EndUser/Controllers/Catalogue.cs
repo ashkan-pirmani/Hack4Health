@@ -33,11 +33,11 @@ namespace Federated.Areas.EndUser.Controllers
             
 
                 var webClient = new WebClient();
-                var jsoncAge = webClient.DownloadString("C:/Users/ashka/iCloudDrive/Desktop/PhD/Projects/COVID19-GDSI2021-Dashboard/Federated/wwwroot/Scripts/Python/MSDA_Querry3/Outputs/clinicians-age_in_cat.json");
-                var jsoncDMT = webClient.DownloadString("C:/Users/ashka/iCloudDrive/Desktop/PhD/Projects/COVID19-GDSI2021-Dashboard/Federated/wwwroot/Scripts/Python/MSDA_Querry3/Outputs/clinicians-dmt_type_overall.json");
-                var jsoncEDSS = webClient.DownloadString("C:/Users/ashka/iCloudDrive/Desktop/PhD/Projects/COVID19-GDSI2021-Dashboard/Federated/wwwroot/Scripts/Python/MSDA_Querry3/Outputs/clinicians-edss_in_cat2.json");
-                var jsoncMST = webClient.DownloadString("C:/Users/ashka/iCloudDrive/Desktop/PhD/Projects/COVID19-GDSI2021-Dashboard/Federated/wwwroot/Scripts/Python/MSDA_Querry3/Outputs/clinicians-ms_type2.json");
-                var jsoncSEX = webClient.DownloadString("C:/Users/ashka/iCloudDrive/Desktop/PhD/Projects/COVID19-GDSI2021-Dashboard/Federated/wwwroot/Scripts/Python/MSDA_Querry3/Outputs/clinicians-sex_binary.json");
+                var jsoncAge = webClient.DownloadString("~/clinicians-age_in_cat.json");
+                var jsoncDMT = webClient.DownloadString("~/clinicians-dmt_type_overall.json");
+                var jsoncEDSS = webClient.DownloadString("~/clinicians-edss_in_cat2.json");
+                var jsoncMST = webClient.DownloadString("~/clinicians-ms_type2.json");
+                var jsoncSEX = webClient.DownloadString("~/clinicians-sex_binary.json");
 
 
                 var cAGE = JsonConvert.DeserializeObject<clinicians_age_in_cat>(jsoncAge);
